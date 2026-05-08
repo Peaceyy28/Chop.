@@ -103,6 +103,7 @@ body {
     justify-content: space-around;
     gap: 5rem;
     padding-bottom: 5rem;
+    padding: 2rem ;
 }
 
 .food img {

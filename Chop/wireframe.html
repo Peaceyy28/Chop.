@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nigerian Food Site — Wireframe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #080808;
+    --dark: #111111;
+    --card: #161616;
+    --border: #222222;
+    --amber: #C8860A;
+    --amber-light: #E8A020;
+    --red: #8B1A1A;
+    --text: #F0EDE8;
+    --muted: #888880;
+    --label: #555550;
+  }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* PAGE LABELS */
+  .page-label {
+    background: var(--amber);
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    border-left: 2px solid var(--amber);
+    padding-left: 10px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 60px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,8,8,0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 32px;
+    z-index: 90;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .nav-logo span { color: var(--amber); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-search {
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .nav-cta {
+    background: var(--amber);
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 92vh;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 60px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a0a00 0%, #0a0500 40%, #080808 100%);
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 28vw;
+    font-weight: 900;
+    color: rgba(200, 134, 10, 0.04);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: -10px;
+  }
+
+  .hero-image-placeholder {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 70% 40%, rgba(139, 26, 26, 0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 30% 60%, rgba(200, 134, 10, 0.15) 0%, transparent 50%);
+  }
+
+  .hero-image-box {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    height: 500px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card);
+    overflow: hidden;
+  }
+
+  .hero-image-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200,134,10,0.1), rgba(139,26,26,0.1));
+  }
+
+  .hero-image-label {
+    color: var(--label);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .hero-image-label .emoji { font-size: 32px; display: block; margin-bottom: 10px; opacity: 0.5; }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--amber);
+  }
+
+  .hero-sub {
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 380px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .btn-primary {
+    background: var(--amber);
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .btn-ghost {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--label);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--amber), transparent);
+  }
+
+  /* ── FEATURED ── */
+  .featured {
+    padding: 100px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  .section-title span { color: var(--amber); }
+
+  .see-all {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .recipe-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+
+  .recipe-card:hover { border-color: var(--amber); }
+
+  .card-image {
+    height: 220px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--label);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200,134,10,0.05), transparent);
+  }
+
+  .card-image .food-emoji {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0.4;
+  }
+
+  .card-body { padding: 20px; }
+
+  .card-category {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+
+  .card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* ── CATEGORIES ── */
+  .categories {
+    padding: 100px 60px;
+    border-bottom: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .category-card {
+    border: 1px solid var(--border);
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: var(--black);
+  }
+
+  .category-card:hover {
+    border-color: var(--amber);
+    background: rgba(200,134,10,0.05);
+  }
+
+  .cat-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
+
+  .cat-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .cat-count {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* ── ABOUT TEASER ── */
+  .about-teaser {
+    padding: 100px 60px;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .teaser-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 20px;
+  }
+
+  .teaser-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+
+  .teaser-body {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .teaser-image {
+    height: 400px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--label);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 60px 60px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  .footer-logo span { color: var(--amber); }
+
+  .footer-tagline {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 240px;
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--label);
+    font-size: 12px;
+  }
+
+  /* ── PAGE DIVIDER ── */
+  .page-divider {
+    height: 60px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--border) 0px,
+      var(--border) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 40px 0 0;
+  }
+
+  .page-divider-label {
+    background: var(--dark);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+  }
+
+  /* ── RECIPES PAGE ── */
+  .recipes-header {
+    padding: 80px 60px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .recipes-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1.0;
+    margin-bottom: 16px;
+  }
+
+  .recipes-title span { color: var(--amber); }
+
+  .recipes-desc {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .filter-bar {
+    padding: 24px 60px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    background: var(--dark);
+  }
+
+  .filter-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #000;
+  }
+
+  .recipes-grid-section {
+    padding: 60px;
+  }
+
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* ── RECIPE DETAIL ── */
+  .detail-hero {
+    height: 60vh;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a0800, #080808);
+  }
+
+  .detail-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8,8,8,0.9) 0%, transparent 60%);
+  }
+
+  .detail-hero-content { position: relative; z-index: 2; }
+
+  .detail-category {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+
+  .detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.0;
+  }
+
+  .detail-meta-bar {
+    padding: 28px 60px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 48px;
+    background: var(--dark);
+  }
+
+  .meta-item { text-align: center; }
+
+  .meta-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--amber);
+  }
+
+  .meta-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .detail-body {
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+  }
+
+  .ingredients-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ingredients-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--muted);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ingredient-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--amber);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .steps-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .step {
+    display: flex;
+    gap: 24px;
+  }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(200,134,10,0.2);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 48px;
+  }
+
+  .step-text {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    padding-top: 8px;
+  }
+
+  /* ANNOTATION SYSTEM */
+  .annotation {
+    position: relative;
+    display: inline-block;
+  }
+
+  .annotation::after {
+    content: attr(data-note);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 16px;
+    background: rgba(200,134,10,0.15);
+    border: 1px solid rgba(200,134,10,0.3);
+    color: var(--amber);
+    font-size: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════ HOME PAGE ════════════════════════════════════ -->
+<div class="page-label">📄 PAGE 1 — HOME</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">Chop<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Recipes</a></li>
+    <li><a href="#">Categories</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-search">🔍</span>
+    <button class="nav-cta">Explore</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">CHOP</div>
+  <div class="hero-image-placeholder"></div>
+  <div class="hero-image-box">
+    <div class="hero-image-label">
+      <span class="emoji">🍲</span>
+      Cinematic food<br>photography here
+    </div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Nigerian Cuisine · Beautifully Served</p>
+    <h1 class="hero-title">Food that<br>tells a <em>story.</em></h1>
+    <p class="hero-sub">Authentic Nigerian recipes, rich flavours, and the culture behind every dish. Presented the way our food deserves.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Explore Recipes</button>
+      <a href="#" class="btn-ghost">Our story →</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- FEATURED DISHES -->
+<section class="featured">
+  <div class="section-header">
+    <div>
+      <p class="section-label">Featured</p>
+      <h2 class="section-title">Dishes you<br>need to <span>try.</span></h2>
+    </div>
+    <a href="#" class="see-all">See all recipes →</a>
+  </div>
+  <div class="cards-row">
+    <div class="recipe-card">
+      <div class="card-image"><span class="food-emoji">🍚</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Rice</p>
+        <h3 class="card-name">Jollof Rice</h3>
+        <div class="card-meta"><span>⏱ 45 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image"><span class="food-emoji">🥣</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Soup</p>
+        <h3 class="card-name">Egusi Soup</h3>
+        <div class="card-meta"><span>⏱ 60 min</span><span>★ Medium</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image"><span class="food-emoji">🍢</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Street Food</p>
+        <h3 class="card-name">Suya</h3>
+        <div class="card-meta"><span>⏱ 30 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image"><span class="food-emoji">🫕</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Soup</p>
+        <h3 class="card-name">Ofe Onugbu</h3>
+        <div class="card-meta"><span>⏱ 90 min</span><span>★ Hard</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <p class="section-label">Browse by type</p>
+  <h2 class="section-title">What are you<br>craving <span>today?</span></h2>
+  <div class="categories-grid">
+    <div class="category-card">
+      <span class="cat-emoji">🥣</span>
+      <p class="cat-name">Soups</p>
+      <p class="cat-count">12 recipes</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-emoji">🍚</span>
+      <p class="cat-name">Rice Dishes</p>
+      <p class="cat-count">8 recipes</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-emoji">🍢</span>
+      <p class="cat-name">Street Food</p>
+      <p class="cat-count">10 recipes</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-emoji">🍹</span>
+      <p class="cat-name">Drinks</p>
+      <p class="cat-count">6 recipes</p>
+    </div>
+    <div class="category-card">
+      <span class="cat-emoji">🥙</span>
+      <p class="cat-name">Snacks</p>
+      <p class="cat-count">9 recipes</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="about-teaser">
+  <div class="teaser-text">
+    <p class="eyebrow">Our Mission</p>
+    <h2 class="teaser-title">Nigerian food, finally at home online.</h2>
+    <p class="teaser-body">We believe our cuisine deserves to be presented with the same beauty and intention as any other great food culture in the world. This is that place.</p>
+    <a href="#" class="btn-primary" style="display:inline-block;">Read Our Story</a>
+  </div>
+  <div class="teaser-image">
+    <div style="text-align:center">
+      <span style="font-size:40px;display:block;margin-bottom:12px;opacity:0.3">📸</span>
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase">Brand photo / story image</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Chop<span>.</span></div>
+      <p class="footer-tagline">Nigerian cuisine, beautifully served. Authentic recipes and rich food culture — all in one place.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Explore</p>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">All Recipes</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Categories</p>
+      <ul class="footer-links">
+        <li><a href="#">Soups</a></li>
+        <li><a href="#">Rice Dishes</a></li>
+        <li><a href="#">Street Food</a></li>
+        <li><a href="#">Drinks</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Follow</p>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Chop. Built by Oluwanifemi.</span>
+    <span>Nigerian food, beautifully served. 🖤</span>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════ RECIPES PAGE ════════════════════════════════════ -->
+<div class="page-divider"><span class="page-divider-label">Next Page</span></div>
+<div class="page-label">📄 PAGE 2 — RECIPES</div>
+
+<nav>
+  <div class="nav-logo">Chop<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Recipes</a></li>
+    <li><a href="#">Categories</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-search">🔍</span>
+    <button class="nav-cta">Explore</button>
+  </div>
+</nav>
+
+<div class="recipes-header">
+  <h1 class="recipes-title">All <span>Recipes.</span></h1>
+  <p class="recipes-desc">From Jollof to Banga soup — every dish, every region, every occasion.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active">All</button>
+  <button class="filter-btn">Soups</button>
+  <button class="filter-btn">Rice Dishes</button>
+  <button class="filter-btn">Street Food</button>
+  <button class="filter-btn">Drinks</button>
+  <button class="filter-btn">Snacks</button>
+</div>
+
+<div class="recipes-grid-section">
+  <div class="recipes-grid">
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🍚</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Rice</p>
+        <h3 class="card-name">Jollof Rice</h3>
+        <div class="card-meta"><span>⏱ 45 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🥣</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Soup</p>
+        <h3 class="card-name">Egusi Soup</h3>
+        <div class="card-meta"><span>⏱ 60 min</span><span>★ Medium</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🍢</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Street Food</p>
+        <h3 class="card-name">Suya</h3>
+        <div class="card-meta"><span>⏱ 30 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🫕</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Soup</p>
+        <h3 class="card-name">Banga Soup</h3>
+        <div class="card-meta"><span>⏱ 75 min</span><span>★ Medium</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🥙</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Snack</p>
+        <h3 class="card-name">Puff Puff</h3>
+        <div class="card-meta"><span>⏱ 25 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="card-image" style="height:260px"><span class="food-emoji">🍹</span>Photo</div>
+      <div class="card-body">
+        <p class="card-category">Drink</p>
+        <h3 class="card-name">Zobo</h3>
+        <div class="card-meta"><span>⏱ 20 min</span><span>★ Easy</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ RECIPE DETAIL PAGE ════════════════════════════════════ -->
+<div class="page-divider"><span class="page-divider-label">Next Page</span></div>
+<div class="page-label">📄 PAGE 3 — RECIPE DETAIL</div>
+
+<nav>
+  <div class="nav-logo">Chop<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Recipes</a></li>
+    <li><a href="#">Categories</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-search">🔍</span>
+    <button class="nav-cta">Explore</button>
+  </div>
+</nav>
+
+<div class="detail-hero">
+  <div class="detail-hero-content">
+    <p class="detail-category">Rice Dishes</p>
+    <h1 class="detail-title">Jollof Rice.</h1>
+  </div>
+</div>
+
+<div class="detail-meta-bar">
+  <div class="meta-item">
+    <div class="meta-value">20</div>
+    <div class="meta-label">Prep (mins)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-value">45</div>
+    <div class="meta-label">Cook (mins)</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-value">4–6</div>
+    <div class="meta-label">Servings</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-value">Easy</div>
+    <div class="meta-label">Difficulty</div>
+  </div>
+</div>
+
+<div class="detail-body">
+  <div>
+    <p class="section-label">Ingredients</p>
+    <ul class="ingredients-list">
+      <li><span class="ingredient-dot"></span> 3 cups long grain rice</li>
+      <li><span class="ingredient-dot"></span> 5 medium tomatoes</li>
+      <li><span class="ingredient-dot"></span> 3 red bell peppers</li>
+      <li><span class="ingredient-dot"></span> 2 scotch bonnets</li>
+      <li><span class="ingredient-dot"></span> 1 large onion</li>
+      <li><span class="ingredient-dot"></span> 1/2 cup vegetable oil</li>
+      <li><span class="ingredient-dot"></span> 2 cups chicken stock</li>
+      <li><span class="ingredient-dot"></span> Salt, seasoning cubes</li>
+    </ul>
+  </div>
+  <div>
+    <p class="section-label">Instructions</p>
+    <ol class="steps-list">
+      <li class="step">
+        <span class="step-num">01</span>
+        <p class="step-text">Blend the tomatoes, red bell peppers, scotch bonnets, and half the onion into a smooth paste. Set aside.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">02</span>
+        <p class="step-text">Heat oil in a large pot over medium heat. Fry the remaining diced onion until translucent and fragrant.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">03</span>
+        <p class="step-text">Add the blended pepper mix and fry on medium heat, stirring frequently, until the oil floats to the top — about 20–25 minutes.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">04</span>
+        <p class="step-text">Add chicken stock, seasoning, and salt. Stir well, then add the washed rice. Mix everything together.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">05</span>
+        <p class="step-text">Cover tightly and cook on low heat for 30 minutes, checking and stirring every 10 minutes until rice is cooked through.</p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ ABOUT PAGE ════════════════════════════════════ -->
+<div class="page-divider"><span class="page-divider-label">Next Page</span></div>
+<div class="page-label">📄 PAGE 4 — ABOUT</div>
+
+<nav>
+  <div class="nav-logo">Chop<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Recipes</a></li>
+    <li><a href="#">Categories</a></li>
+    <li><a href="#" class="active">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-search">🔍</span>
+    <button class="nav-cta">Explore</button>
+  </div>
+</nav>
+
+<section style="padding: 120px 60px; border-bottom: 1px solid var(--border); text-align:center; background: linear-gradient(180deg, #0f0800, #080808);">
+  <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:24px">Our Mission</p>
+  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,80px);font-weight:900;letter-spacing:-3px;line-height:1.0;max-width:800px;margin:0 auto 32px">Nigerian food deserves a <em style="font-style:italic;color:var(--amber)">beautiful home.</em></h1>
+  <p style="color:var(--muted);font-size:17px;max-width:520px;margin:0 auto;line-height:1.8">This site was built because our cuisine is extraordinary — and the internet hadn't caught up yet.</p>
+</section>
+
+<section style="padding: 100px 60px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; border-bottom:1px solid var(--border)">
+  <div style="height:420px;background:var(--card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--label);font-size:11px;letter-spacing:2px;text-transform:uppercase">
+    <div style="text-align:center"><span style="font-size:40px;display:block;margin-bottom:12px;opacity:0.3">📸</span>Builder photo</div>
+  </div>
+  <div>
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:20px">The Story</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;letter-spacing:-1px;margin-bottom:24px;line-height:1.1">Built by a Nigerian,<br>for Nigerians.</h2>
+    <p style="color:var(--muted);font-size:15px;line-height:1.9;margin-bottom:16px">I grew up watching food be made with love, technique, and stories passed down through generations. But when I looked online, I couldn't find a place that showed it the way it deserved.</p>
+    <p style="color:var(--muted);font-size:15px;line-height:1.9;margin-bottom:32px">So I built one. This is Chop — a place where Nigerian food finally looks as good as it tastes.</p>
+    <button class="btn-primary">Explore Recipes</button>
+  </div>
+</section>
+
+<footer style="padding:40px 60px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+  <div class="footer-logo">Chop<span>.</span></div>
+  <span style="color:var(--label);font-size:12px">© 2025 Chop. Nigerian food, beautifully served. 🖤</span>
+</footer>
+
+</body>
+</html>
