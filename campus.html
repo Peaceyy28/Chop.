@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chop Campus - Coming Soon</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/chop.css">
+    <link rel="stylesheet" href="css/campus.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TRACKING_ID');
+    </script>
+</head>
+
+<body>
+
+    <section class="Nav-bar">
+        <div class="header">
+            <h1>Chop<span class="color">.</span></h1>
+        </div>
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <nav><a href="index.html">Chop</a></nav>
+            <nav><a href="recipes/recipes.html">Recipes</a></nav>
+            <nav><a href="campus.html" class="active-nav">Campus</a></nav>
+            <nav><a href="about.html">About</a></nav>
+        </div>
+        <div class="nav-btn">
+            <button onclick="location.href='recipes/recipes.html'">Explore</button>
+        </div>
+    </section>
+
+    <section class="campus-hero">
+        <div class="hero-content">
+            <span class="badge">LAUNCHING FIRST AT OAU</span>
+            <h1>Chop Campus.<br>Seamless dining, <span class="accent-text">connected.</span></h1>
+            <p class="tagline-sub">
+                Connecting university students with local campus food vendors. Browse menus, place orders, and pay seamlessly — 
+                starting first at Obafemi Awolowo University and expanding to campuses nationwide.
+            </p>
+            
+
+            <div class="waitlist-card">
+                <h3>Get Early Access</h3>
+                <p>Be the first to know when we go live and join the exclusive beta.</p>
+                <form id="waitlistForm" name="waitlist" data-netlify="true" onsubmit="handleWaitlistSubmit(event)">
+                    <div class="input-group">
+                        <input type="text" id="userName" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="userEmail" name="email" placeholder="Your Student Email (or personal)" required>
+                    </div>
+                    <div class="input-group">
+                        <select id="userRole" name="role" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="student">I am a Student</option>
+                            <option value="vendor">I am a Food Vendor</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">JOIN THE WAITLIST</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="section-title">
+            <span class="large">|</span> THE VISION
+        </div>
+        
+        <div class="props-grid">
+            <div class="prop-column">
+                <h2 class="column-title student-header">For Students</h2>
+                <div class="step-card">
+                    <div class="step-body">
+                        <h4>A Smarter Dining Experience</h4>
+                        <p>Browse active campus restaurants and menus from anywhere. No more standing under the sun waiting to order.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-body">
+                        <h4>Convenient & Fast Pickups</h4>
+                        <p>Pre-order your favorite campus meals and collect them instantly when ready. Enjoy fresh food without the line.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prop-column">
+                <h2 class="column-title vendor-header">For Campus Vendors</h2>
+                <div class="step-card">
+                    <div class="step-body">
+                        <h4>Digital Storefront & Visibility</h4>
+                        <p>Put your menu online and gain direct visibility to students across the entire campus. Receive orders smoothly.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-body">
+                        <h4>Better Kitchen Efficiency</h4>
+                        <p>Manage order queues effortlessly, plan your prep times, and receive secure daily payouts directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-card">
+            <div class="success-icon">✓</div>
+            <h2>You're on the list!</h2>
+            <p id="successMessage">Thank you for joining. We will notify you when Chop Campus starts boarding at OAU.</p>
+            <button class="modal-close-btn" onclick="closeModal()">Awesome</button>
+        </div>
+    </div>
+
+
+    <section class="footer">
+        <div class="sub1">
+            <div>
+                <h1>Chop<span class="color">.</span></h1>
+            </div>
+            <div>
+                <p>
+                    Nigerian cuisine, beautifully served. Authentic recipes, campus dining, and rich food cultures all in one place.
+                </p>
+            </div>
+        </div>
+        <div class="sub2">
+            <h5>EXPLORE</h5>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes/recipes.html">All Recipes</a></li>
+            <li><a href="campus.html">Campus</a></li>
+            <li><a href="about.html">About</a></li>
+        </div>
+        <div class="sub3">
+            <h5>CATEGORIES</h5>
+            <li><a href="recipes/recipes.html">Soups</a></li>
+            <li><a href="recipes/recipes.html">Rice Dishes</a></li>
+            <li><a href="recipes/recipes.html">Street Food</a></li>
+            <li><a href="recipes/recipes.html">Drinks</a></li>
+        </div>
+        <div class="sub4">
+            <h5>FOLLOW</h5>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">X</a></li>
+        </div>
+    </section>
+
+    <script>
+        function handleWaitlistSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('userName').value;
+            const role = document.getElementById('userRole').value;
+            
+            const msgElement = document.getElementById('successMessage');
+            if (role === 'vendor') {
+                msgElement.textContent = `Hi ${name}, thank you! We will reach out to you shortly to set up your campus vendor account.`;
+            } else {
+                msgElement.textContent = `Hi ${name}, thank you! You've successfully secured early access. We will notify you when we go live at OAU.`;
+            }
+            
+            document.getElementById('successModal').classList.add('visible');
+            document.getElementById('waitlistForm').reset();
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('visible');
+        }
+        
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+
+</html>

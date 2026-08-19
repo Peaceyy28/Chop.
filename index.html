@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chop</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/chop.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TRACKING_ID');
+    </script>
+    
+</head>
+
+<body>
+    <section class="Nav-bar">
+        <div class="header">
+            <h1>Chop<span class="color">.</span></h1>
+        </div>
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <nav><a href="index.html">Chop</a></nav>
+            <nav><a href="recipes/recipes.html">Recipes</a></nav>
+            <nav><a href="campus.html">Campus</a></nav>
+            <nav><a href="about.html">About</a></nav>
+        </div>
+        <div class="nav-btn">
+            <button onclick="location.href='recipes/recipes.html'">Explore</button>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="sub-hero">
+            <div class="tagline">
+                NIGERIAN CUISINE | BEAUTIFULLY SERVED
+            </div>
+            <div class="hero-text">
+                <h1>Food that tells a <span class="color">Story.</span></h1>
+            </div>
+            <div class="hero-para">
+                Authentic Nigerian recipes, rich flavours, and the culture behind every dish. Presented the way our
+                food
+                deserves.
+            </div>
+            <div class="hero-btn">
+                <button class="primary-btn" onclick="location.href='recipes/recipes.html'">EXPLORE RECIPES</button>
+                <button class="secondary-btn" onclick="location.href='about.html'">Our story ¬</button>
+            </div>
+        </div>
+        <div class="hero-images">
+            <div class="img-wrapper top-left">
+                <img src="assets/images/images (15).jpeg">
+            </div>
+            <div class="img-wrapper top-right">
+                <img src="assets/images/images (15).jpeg">
+            </div>
+            <div class="img-wrapper bottom-left">
+                <img src="assets/images/images (15).jpeg">
+            </div>
+            <div class="img-wrapper bottom-right">
+                <img src="assets/images/images (15).jpeg">
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="section1">
+            <span class="large">|</span>FEATURED
+        </div>
+        <div class="featured-text">
+            <div class="featured-hero">
+                <h1>Dishes you need to <span class="color1">try.</span> </h1>
+            </div>
+            <div class="featured-para">
+                See all recipes ¬
+            </div>
+        </div>
+        <div class="dishes">
+            <div class="box" onclick="location.href='recipes/details.html?id=1'">
+                <div class="img">
+                    <img src="assets/images/download (10).jpeg">
+                </div>
+                <div class="img-text">
+                    <span class="color1">Rice</span><br>
+                    <span class="bold"></span>Jollof Rice<br>
+                    <div class="time">
+                        <div>
+                            45 min
+                        </div>
+                        <div>
+                            Easy
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" onclick="location.href='recipes/details.html?id=3'">
+                <div class="img">
+                    <img src="assets/images/images (4).jpeg">
+                </div>
+                <div class="img-text">
+                    <span class="color1">Soup</span><br>
+                    <span class="bold"></span>Egusi Soup<br>
+                    <div class="time">
+                        <div>
+                            60 min
+                        </div>
+                        <div>
+                            Medium
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" onclick="location.href='recipes/details.html?id=11'">
+                <div class="img">
+                    <img src="assets/images/download (5).jpeg">
+                </div>
+                <div class="img-text">
+                    <span class="color1">Street Food</span><br>
+                    <span class="bold"></span> Suya<br>
+                    <div class="time">
+                        <div>
+                            20 min
+                        </div>
+                        <div>
+                            Easy
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" onclick="location.href='recipes/details.html?id=4'">
+                <div class="img">
+                    <img src="assets/images/download (4).jpeg">
+                </div>
+                <div class="img-text">
+                    <span class="color1">Soup</span><br>
+                    <span class="bold"></span>Ogbono<br>
+                    <div class="time">
+                        <div>
+                            40 min
+                        </div>
+                        <div>
+                            Medium
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="types">
+        <div class="section1">
+            <span class="large">|</span> BROWSE BY TYPE
+        </div>
+        <div class="type-hero">
+            <h1>What are you craving <span class="color1">today?</span></h1>
+        </div>
+        <div class="foods">
+            <div class="category-card" onclick="location.href='recipes/recipes.html?category=Soup'">
+                <div class="category-circle">
+                    <img src="assets/images/images (6).jpeg" alt="Soups">
+                </div>
+                <h4 class="category-name">Soups</h4>
+                <span class="category-count">12 recipes</span>
+            </div>
+            <div class="category-card" onclick="location.href='recipes/recipes.html?category=Rice'">
+                <div class="category-circle">
+                    <img src="assets/images/download (2).jpeg" alt="Rice Dishes">
+                </div>
+                <h4 class="category-name">Rice Dishes</h4>
+                <span class="category-count">8 recipes</span>
+            </div>
+            <div class="category-card" onclick="location.href='recipes/recipes.html?category=Street%20Food'">
+                <div class="category-circle">
+                    <img src="assets/images/images (8).jpeg" alt="Street Food">
+                </div>
+                <h4 class="category-name">Street Food</h4>
+                <span class="category-count">10 recipes</span>
+            </div>
+            <div class="category-card" onclick="location.href='recipes/recipes.html?category=Drinks'">
+                <div class="category-circle">
+                    <img src="assets/images/images (11).jpeg" alt="Drinks">
+                </div>
+                <h4 class="category-name">Drinks</h4>
+                <span class="category-count">6 recipes</span>
+            </div>
+            <div class="category-card" onclick="location.href='recipes/recipes.html?category=Snacks'">
+                <div class="category-circle">
+                    <img src="assets/images/download (6).jpeg" alt="Snacks">
+                </div>
+                <h4 class="category-name">Snacks</h4>
+                <span class="category-count">9 recipes</span>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div>
+            <div class="section1">
+                <span class="large">|</span> OUR MISSION
+            </div>
+            <div class="mission-hero">
+                <div class="mission-header">
+                    <h1>Nigerian food, finally at home online.</h1>
+                </div>
+            </div>
+            <div class="mission-text">
+                <p>
+                    We believe our cuisine deserves to be presented with the same beauty and intentionality as any other
+                    great food culture in the world. This is that place.
+                </p>
+            </div>
+            <div>
+                <button><a href="about.html">READ OUR STORY</a></button>
+            </div>
+
+        </div>
+        <div>
+            <img src="assets/images/5283d81c664b43c5f57a3a186d273063.jpeg">
+        </div>
+
+    </section>
+    <button class="back-to-top" id="backToTop">↑</button>
+    <section class="footer">
+        <div class="sub1">
+            <div>
+                <h1>Chop<span class="color">.</span></h1>
+            </div>
+            <div>
+                <p>
+                    Nigerian cuisine, beautifully served. Authentic recipes and rich food cultures all in one place.
+                </p>
+            </div>
+        </div>
+        <div class="sub2">
+            <h5>EXPLORE</h5>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes/recipes.html">All Recipes</a></li>
+            <li><a href="campus.html">Campus</a></li>
+            <li><a href="about.html">About</a></li>
+        </div>
+        <div class="sub3">
+            <h5>CATEGORIES</h5>
+            <li><a href="recipes/recipes.html">Soups</a></li>
+            <li><a href="recipes/recipes.html">Rice Dishes</a></li>
+            <li><a href="recipes/recipes.html">Street Food</a></li>
+            <li><a href="recipes/recipes.html">Drinks</a></li>
+        </div>
+        <div class="sub4">
+            <h5>FOLLOW</h5>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">X</a></li>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+
+</html>
