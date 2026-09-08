@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe-Details</title>
+    <title>Recipe Details | Chop</title>
+    <meta name="description" content="Detailed authentic Nigerian recipe, ingredients list, step-by-step cooking directions, and video walkthrough.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Open Graph / Social Media Preview Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Recipe Details | Chop - Authentic Nigerian Cuisine">
+    <meta property="og:description" content="Step-by-step authentic Nigerian recipe walkthrough, ingredient proportions, and cooking tips.">
+    <meta property="og:image" content="../assets/images/nigerian-food-platter-jollof-rice-plantain-stew-chicken-photo.jpg">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/details.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TRACKING_ID');
-    </script>
 </head>
 
 <body>
@@ -33,9 +35,10 @@
             <nav><a href="recipes.html">Recipes</a></nav>
             <nav><a href="../campus.html">Campus</a></nav>
             <nav><a href="../about.html">About</a></nav>
+            <nav><a href="admin.html" style="color: var(--amber);">+ Add Recipe</a></nav>
         </div>
         <div class="btn">
-            <button onclick="location.href='recipes.html'">Explore</button>
+            <button onclick="location.href='admin.html'">+ Add Recipe</button>
         </div>
     </section>
     <div class="header">
@@ -46,30 +49,33 @@
             Jollof Rice.
         </h1>
     </div>
+    <div class="recipe-hero" id="recipeHeroWrapper" style="display: none;">
+        <img id="recipeImage" src="" alt="Recipe Image">
+    </div>
     <div class="data-note">
         <div>
-            <span class="color" id="prepTime">15 min</span><br>
-            <span class="grey">Prep(Mins)</span>
+            <span class="color" id="prepTime">15 min</span>
+            <span class="grey">PREP (MINS)</span>
         </div>
         <div>
-            <span class="color" id="cookTime">45 min</span><br>
+            <span class="color" id="cookTime">45 min</span>
             <span class="grey">COOK (MINS)</span>
         </div>
         <div>
-            <span class="color" id="servings">4-6</span><br>
+            <span class="color" id="servings">4-6</span>
             <span class="grey">SERVINGS</span>
         </div>
-        <DIV>
-            <span class="color" id="difficulty">Easy</span><br>
+        <div>
+            <span class="color" id="difficulty">Easy</span>
             <span class="grey">DIFFICULTY</span>
-        </DIV>
+        </div>
     </div>
     <div class="details">
 
         <div class="ingredients">
-            <div>
+            <div class="ingredients-box">
                 <div class="ingredient-head">
-                    | INGREDIENT
+                    | INGREDIENTS
                 </div>
                 <ul id="ingredientsList">
                     <li><span class="ingredient-dot"></span>3 cups long grain rice</li>
@@ -82,26 +88,21 @@
                     <li><span class="ingredient-dot"></span>Salt, seasoning cubes</li>
                 </ul>
             </div>
-            <div class="Instruction">
+            <div class="instruction-box">
                 <div class="ingredient-head">
-                    | INSTRUCTION
+                    | INSTRUCTIONS
                 </div>
                 <ol id="instructionsList">
-                    <li><span class=" number">01</span> Blend the tomatoes, red bell pepper, scotch bonnets, and half
-                        the
-                        onion into a smooth paste. Set aside.</li>
-                    <li><span class=" number">02</span>Heat oil in a large pot over medium heat. Fry the remainding
-                        diced onion until translucent and fragrant.</li>
-                    <li><span class=" number">03</span> Add the blended pepper mix and fry on medium heat, stirring
-                        frequently, until the oil floats to the top about 20-25 minutes.</li>
-                    <li><span class=" number">04</span> Add chicken stock, seasoning, and salt. Stir well, then add the
-                        washed rice. Mix everything together.</li>
-                    <li><span class=" number">05</span> Cover tightly and cook on low heat for 30 minutes, checking and
-                        stirring every 10 minutes until rice is cooked through.</li>
+                    <li><span class="number">01</span> Blend the tomatoes, red bell pepper, scotch bonnets, and half the onion into a smooth paste. Set aside.</li>
+                    <li><span class="number">02</span> Heat oil in a large pot over medium heat. Fry the remainding diced onion until translucent and fragrant.</li>
+                    <li><span class="number">03</span> Add the blended pepper mix and fry on medium heat, stirring frequently, until the oil floats to the top about 20-25 minutes.</li>
+                    <li><span class="number">04</span> Add chicken stock, seasoning, and salt. Stir well, then add the washed rice. Mix everything together.</li>
+                    <li><span class="number">05</span> Cover tightly and cook on low heat for 30 minutes, checking and stirring every 10 minutes until rice is cooked through.</li>
                 </ol>
             </div>
         </div>
         
+        <!-- Video Tutorial Section -->
         <div class="video-section" id="videoSection" style="display: none;">
             <div class="video-head">| VIDEO GUIDE</div>
             <div class="video-container">
@@ -110,6 +111,7 @@
         </div>
     </div>
 
+    <!-- JavaScript Files for Dynamic Data -->
     <script src="../js/data.js"></script>
     <script src="../js/details.js"></script>
     <script>

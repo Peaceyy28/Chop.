@@ -139,6 +139,7 @@ button {
     font-size: 30px;
 }
 
+/* MOBILE & TABLET RESPONSIVENESS */
 @media (max-width: 1024px) {
     .hero {
         padding-top: 6rem;
@@ -178,6 +179,7 @@ button {
     }
 }
 
+/* COMMON HAMBURGER MENU STYLING */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -235,6 +237,7 @@ button {
         display: none !important;
     }
 
+    /* Hamburger to Close "X" Animation */
     .hamburger.toggle span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }

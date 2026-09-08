@@ -68,52 +68,116 @@ body {
     transform: scale(1.1);
 }
 
+.header {
+    padding: 3rem 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .header p {
     letter-spacing: 2px;
     color: var(--amber);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 .header h1 {
-    font-size: 2.8rem
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
 }
 
+/* RECIPE HERO IMAGE */
+.recipe-hero {
+    padding: 0 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+/* DATA METRICS BANNER */
 .data-note {
     background-color: var(--card);
-    padding: 2rem 0;
+    padding: 1.5rem 2rem;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
-    display: flex;
-    gap: 5rem;
-    padding-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     text-align: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.data-note > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .color {
     color: var(--amber);
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .grey {
     color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* INGREDIENTS & INSTRUCTIONS SECTION */
+.details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .ingredients {
     display: flex;
-    justify-content: space-around;
-    padding-top: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-top: 4rem;
+}
+
+.ingredients-box, .instruction-box {
+    flex: 1;
 }
 
 .ingredient-head {
     color: var(--amber);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
-.ingredients li {
+.ingredients ul, .ingredients-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li, .ingredients-box li {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 17px;
+    font-size: 16px;
     color: var(--muted);
-    padding-bottom: 14px;
+    padding: 12px 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -125,43 +189,51 @@ body {
     flex-shrink: 0;
 }
 
+.instruction-box ol, #instructionsList {
+    list-style: none;
+    padding: 0;
+}
+
+#instructionsList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
 .number {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 900;
-    color: rgba(200, 134, 10, 0.2);
+    color: rgba(200, 134, 10, 0.4);
     line-height: 1;
     flex-shrink: 0;
-    width: 48px;
+    width: 40px;
 }
 
-.instruction ol {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-    padding-top: 8px;
-}
-
+/* VIDEO TUTORIAL STYLING */
 .video-section {
     margin-top: 4rem;
     border-top: 1px solid var(--border);
     padding-top: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     margin-bottom: 4rem;
 }
 
 .video-head {
     color: var(--amber);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     border-radius: 12px;
@@ -176,7 +248,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
+
+/* COMMON HAMBURGER MENU STYLING */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -234,6 +309,7 @@ body {
         display: none !important;
     }
 
+    /* Hamburger to Close "X" Animation */
     .hamburger.toggle span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -242,6 +318,76 @@ body {
     }
     .hamburger.toggle span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* RECIPE DETAILS MOBILE RESPONSIVENESS */
+    .header {
+        padding: 2rem 1rem 1rem;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .recipe-hero {
+        padding: 0 1rem 1.5rem;
+    }
+
+    .recipe-hero img {
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    .data-note {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.2rem 1rem;
+        gap: 1rem;
+    }
+
+    .color {
+        font-size: 1.3rem;
+    }
+
+    .grey {
+        font-size: 10px;
+    }
+
+    .details {
+        padding: 0 1rem;
+    }
+
+    .ingredients {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .ingredient-head {
+        font-size: 13px;
+        margin-bottom: 1rem;
+    }
+
+    .ingredients li, .ingredients-box li {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    #instructionsList li {
+        font-size: 14px;
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .number {
+        font-size: 28px;
+        width: 32px;
+    }
+
+    .video-section {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        margin-bottom: 2.5rem;
     }
 }
 

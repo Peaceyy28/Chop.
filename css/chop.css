@@ -294,7 +294,26 @@ body {
 }
 
 .featured-para {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    padding-right: 2rem;
+    align-self: flex-end;
+}
+
+.featured-para a {
+    text-decoration: none;
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.featured-para a:hover {
+    color: var(--text);
+    transform: translateX(5px);
 }
 
 .featured {
@@ -526,6 +545,7 @@ body {
 
 @media (max-width: 768px) {
 
+    /* NAVBAR */
     .nav-links {
         display: none;
     }
@@ -538,6 +558,7 @@ body {
         padding-top: 0;
     }
 
+    /* HERO */
     .hero {
         flex-direction: column;
         padding: 2rem 1.5rem;
@@ -580,6 +601,7 @@ body {
         padding: 0.7rem 1.5rem;
     }
 
+    /* FEATURED */
     .featured {
         padding-top: 3rem;
         padding-left: 1rem;
@@ -615,6 +637,7 @@ body {
         height: 140px;
     }
 
+    /* CATEGORIES */
     .types {
         padding-top: 3rem;
         padding-left: 1rem;
@@ -642,6 +665,7 @@ body {
         height: 7.5rem;
     }
 
+    /* MISSION */
     .mission {
         flex-direction: column;
         padding: 3rem 1rem;
@@ -663,6 +687,7 @@ body {
         width: 100%;
     }
 
+    /* FOOTER */
     .footer {
         flex-direction: column;
         gap: 2rem;
@@ -717,7 +742,9 @@ body {
     }
 }
 
+/* MOBILE - below 768px */
 @media (max-width: 768px) {
+    /* NAVBAR */
     .nav-links { display: none; }
     .Nav-bar { padding: 1rem 1.5rem; }
     .btn { padding-top: 0; }
@@ -763,6 +790,7 @@ body {
     .sub1 { width: 100%; }
 }
 
+/* COMMON HAMBURGER MENU STYLING */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -819,6 +847,8 @@ body {
     .Nav-bar .btn, .Nav-bar .nav-btn {
         display: none !important;
     }
+
+    /* Hamburger to Close "X" Animation */
     .hamburger.toggle span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }

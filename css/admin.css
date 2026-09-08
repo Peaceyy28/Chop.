@@ -1,0 +1,236 @@
+/* ADMIN WORKSPACE STYLING */
+.admin-badge {
+    font-size: 11px;
+    background-color: var(--amber);
+    color: var(--black);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.admin-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.admin-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-header p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.form-card, .preview-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.form-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--amber);
+    color: var(--black);
+    border-color: var(--amber);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--black);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--amber);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.action-btn, .save-btn, .export-btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.action-btn {
+    background-color: var(--amber);
+    color: var(--black);
+}
+
+.save-btn {
+    background-color: #2e7d32;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.export-btn {
+    background-color: var(--border);
+    color: var(--text);
+    border: 1px solid var(--amber);
+}
+
+.action-btn:hover, .save-btn:hover, .export-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.preview-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--amber);
+}
+
+.preview-box {
+    min-height: 220px;
+    background-color: var(--black);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-text {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.custom-list-section {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+
+.custom-list-section h4 {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.custom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.custom-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.custom-item-info {
+    font-size: 13px;
+}
+
+.custom-item-name {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.custom-item-meta {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.delete-btn {
+    background-color: #8b1a1a;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 868px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

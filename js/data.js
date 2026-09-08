@@ -6,7 +6,7 @@ const recipes = [
         time: "45 min",
         difficulty: "Easy",
         region: "National",
-        image: "assets/data-images/jollof-rice.jpg",
+        image: "assets/data-images/jollof-rice.jpeg",
         videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
         ingredients: [
             "3 cups long grain rice",
@@ -32,7 +32,7 @@ const recipes = [
         time: "60 min",
         difficulty: "Easy",
         region: "National",
-        image: "assets/data images/Fried rice.jpeg",
+        image: "assets/data-images/Fried rice.jpeg",
         ingredients: [
             "2 cups cooked rice",
             "2 eggs, beaten",
@@ -547,7 +547,7 @@ const recipes = [
         time: "60 min",
         difficulty: "Medium",
         region: "Delta / Ijaw",
-        image: "assets/data-images/banga-soup.jpg",
+        image: "assets/data-images/ofe-akwu.jpeg",
         ingredients: [
             "2 cups palm fruit concentrate (fresh or canned)",
             "500g goat meat or beef",
@@ -855,5 +855,516 @@ const recipes = [
             "Add spinach or uziza leaves if using, stir in, and cook for 2 more minutes.",
             "Serve hot with pounded yam, eba, fufu, or rice."
         ]
+    },
+    {
+        id: 31,
+        name: "Efo Riro",
+        category: "Soup",
+        time: "45 min",
+        difficulty: "Medium",
+        region: "Yoruba",
+        image: "assets/data-images/efo.jpeg",
+        videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
+        ingredients: [
+            "1 kg Spinach or Efo Tete / Shoko leaves, blanched and chopped",
+            "500g assorted meats (beef, ponmo, shaki)",
+            "1/2 cup palm oil",
+            "3 red bell peppers (tatashe) & 2 scotch bonnets, coarsely blended",
+            "1 large onion, chopped",
+            "2 tablespoons locust beans (iru)",
+            "3 tablespoons ground crayfish",
+            "Smoked fish & Stockfish, cleaned",
+            "2 seasoning cubes & Salt to taste"
+        ],
+        steps: [
+            "Season and boil assorted meats and stockfish with onions and seasoning cubes until tender.",
+            "Blanch the chopped spinach leaves in hot water for 2 minutes, drain thoroughly and set aside.",
+            "Heat palm oil in a pot, add half the chopped onions and iru. Fry until fragrant.",
+            "Pour in coarsely blended peppers and fry for 15-20 minutes until oil floats to the top.",
+            "Add cooked meats, smoked fish, crayfish, and stock. Simmer for 10 minutes.",
+            "Stir in blanched spinach leaves, adjust salt and seasoning, and cook on low heat for 3-5 minutes."
+        ]
+    },
+    {
+        id: 32,
+        name: "Ofe Nsala (White Soup)",
+        category: "Soup",
+        time: "40 min",
+        difficulty: "Medium",
+        region: "Igbo",
+        image: "assets/data-images/ji-mmiri-owu.jpeg",
+        videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
+        ingredients: [
+            "1 kg Fresh Catfish or Goat meat",
+            "3-4 medium Raw Yam cubes (for thickener)",
+            "1 tablespoon ground Utazi leaves",
+            "1 piece Calabash Nutmeg (Ehuru), roasted and ground",
+            "2 tablespoons ground Crayfish",
+            "2 Scotch bonnet peppers, blended",
+            "1 piece Ogiri Igbo (fermented castor seeds)",
+            "Seasoning cubes and Salt to taste"
+        ],
+        steps: [
+            "Boil yam cubes in a separate pot until soft, then pound in a mortar into a smooth paste.",
+            "Season catfish/meat with onions, seasoning cubes, and pepper. Add 3 cups of water and bring to a gentle boil.",
+            "Stir in Ogiri, ground Ehuru, and crayfish into the boiling broth.",
+            "Drop small balls of pounded yam paste into the soup. As it boils, the yam melts and thickens the soup.",
+            "Simmer until desired thickness is reached (about 10 minutes).",
+            "Add shredded Utazi leaves for a subtle bitter aroma, cook for 2 minutes, and serve hot with Pounded Yam."
+        ]
+    },
+    {
+        id: 33,
+        name: "Miyan Kuka",
+        category: "Soup",
+        time: "35 min",
+        difficulty: "Easy",
+        region: "Hausa",
+        image: "assets/data-images/miyan kuka.jpeg",
+        ingredients: [
+            "1/2 cup Kuka powder (dried baobab leaf powder)",
+            "500g Beef or Dried Fish",
+            "2 tablespoons ground Dawadawa (locust beans)",
+            "2 tablespoons ground Crayfish",
+            "2 Scotch bonnet peppers, blended",
+            "1/3 cup Palm oil or Vegetable oil",
+            "1 teaspoon Chili powder",
+            "2 seasoning cubes and Salt to taste"
+        ],
+        steps: [
+            "Boil beef with onions, seasoning cubes, and salt until tender. Save stock.",
+            "Add palm oil, blended peppers, dawadawa, and crayfish into the stock. Simmer for 10 minutes.",
+            "Reduce heat to low. Whisk in Kuka powder gradually to prevent clumping.",
+            "Stir continuously as the soup darkens and thickens to a smooth consistency.",
+            "Simmer on low heat for 5 minutes, then serve hot with Tuwo Shinkafa or Tuwo Zaafi."
+        ]
+    },
+    {
+        id: 34,
+        name: "Miyan Taushe",
+        category: "Soup",
+        time: "50 min",
+        difficulty: "Medium",
+        region: "Hausa",
+        image: "assets/data-images/miyan-taushe.jpeg",
+        ingredients: [
+            "500g Pumpkin (Kabewa), peeled and cubed",
+            "1/2 cup Roasted Groundnut paste or roasted peanuts, coarsely ground",
+            "500g Goat meat or Beef",
+            "2 red bell peppers & 2 scotch bonnets, blended",
+            "1 cup Yakuwa or Sorrel leaves (or Spinach), chopped",
+            "1/3 cup Palm oil",
+            "2 tablespoons Crayfish",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Boil pumpkin cubes until soft, then mash into a smooth puree.",
+            "Season and boil goat meat until tender.",
+            "Heat palm oil in a pot, fry blended peppers for 10 minutes.",
+            "Add meat stock, mashed pumpkin puree, and groundnut paste. Stir well until creamy.",
+            "Simmer for 15 minutes over medium-low heat until flavours combine.",
+            "Stir in chopped Yakuwa or spinach leaves, cook for 3 minutes, and serve with Masa or Tuwo."
+        ]
+    },
+    {
+        id: 35,
+        name: "Edikang Ikong",
+        category: "Soup",
+        time: "50 min",
+        difficulty: "Hard",
+        region: "Efik/Ibibio",
+        image: "assets/data-images/afang-soup.jpeg",
+        ingredients: [
+            "5 cups Waterleaf (finely chopped)",
+            "2 cups Ugwu / Pumpkin leaves (finely chopped)",
+            "1 kg Assorted meat (beef, cow skin/ponmo, goat meat)",
+            "Stockfish head & Smoked Periwinkle",
+            "1 cup Palm oil",
+            "3 tablespoons ground Crayfish",
+            "3 Scotch bonnet peppers, blended",
+            "2 Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Season assorted meat and stockfish with onions, seasoning, and salt. Cook with very minimal water.",
+            "Add palm oil, periwinkle, crayfish, and blended peppers to the rich stock. Simmer for 10 minutes.",
+            "Add waterleaf first and cook for 3 minutes (waterleaf releases its natural juices).",
+            "Add Ugwu leaves and stir thoroughly. Do not add extra water.",
+            "Cook for 3–5 minutes on medium heat, adjust salt, and serve with Fufu or Pounded Yam."
+        ]
+    },
+    {
+        id: 36,
+        name: "Ofe Oha",
+        category: "Soup",
+        time: "45 min",
+        difficulty: "Medium",
+        region: "Igbo",
+        image: "assets/data-images/oha soup.jpeg",
+        ingredients: [
+            "2 cups fresh Oha leaves (shredded by hand)",
+            "10-12 Cocoyam corms (boiled & pounded into paste)",
+            "1 cup Palm oil",
+            "500g Assorted meat, Stockfish, and Dry fish",
+            "1 piece Ogiri Igbo",
+            "3 tablespoons ground Crayfish",
+            "2 Scotch bonnet peppers",
+            "2 Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Boil cocoyam corms until tender, peel and pound in a mortar into a sticky paste.",
+            "Season and cook meats and stockfish until soft. Retain stock.",
+            "Stir in palm oil, Ogiri, crayfish, and pepper. Simmer for 5 minutes.",
+            "Drop small lumps of cocoyam paste into the broth. Allow to dissolve and thicken the soup.",
+            "Shred Oha leaves with fingers (avoid knives to prevent darkening). Stir into soup.",
+            "Simmer for 3 minutes and serve with Pounded Yam or Eba."
+        ]
+    },
+    {
+        id: 37,
+        name: "Ofe Onugbu (Bitter Leaf Soup)",
+        category: "Soup",
+        time: "60 min",
+        difficulty: "Hard",
+        region: "Igbo",
+        image: "assets/data-images/ofe onugbu.jpeg",
+        ingredients: [
+            "2 cups washed Bitter leaf (thoroughly washed to reduce bitterness)",
+            "10 Cocoyam corms (thickener)",
+            "1/2 cup Palm oil",
+            "1 kg Assorted meat & Stockfish",
+            "1 piece Ogiri Igbo",
+            "3 tablespoons Crayfish",
+            "2 Scotch bonnet peppers",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Boil cocoyam until soft, then pound into a thick paste.",
+            "Boil assorted meats and stockfish with seasonings until cooked through.",
+            "Add palm oil, Ogiri, crayfish, and peppers into stock. Simmer for 10 minutes.",
+            "Add cocoyam paste in lumps to thicken the soup broth.",
+            "Stir in washed bitter leaf. Simmer for 10–15 minutes until bitter leaves soften and absorb flavours.",
+            "Serve hot with Akpu (Fufu) or Pounded Yam."
+        ]
+    },
+    {
+        id: 38,
+        name: "Abula (Gbegiri & Ewedu Combo)",
+        category: "Soup",
+        time: "50 min",
+        difficulty: "Medium",
+        region: "Yoruba",
+        image: "assets/data-images/abula.jpeg",
+        ingredients: [
+            "1 cup Peeled Brown Beans (for Gbegiri)",
+            "2 cups Ewedu leaves, blended or ijabe whipped",
+            "1/3 cup Palm oil",
+            "1 teaspoon Kaun (potash water) or baking soda for Ewedu",
+            "Assorted meats in Buka stew sauce",
+            "Ground crayfish, locust beans (Iru)",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "For Gbegiri: Boil peeled beans until very soft, mash or blend into smooth liquid. Cook with palm oil, iru, pepper, and crayfish for 20 minutes.",
+            "For Ewedu: Boil ewedu leaves in little water with potash/baking soda, whisk with ijabe broom into smooth green draw.",
+            "Serve Amala dudu in a wide bowl, scoop Gbegiri and Ewedu over it, and top with fiery Buka Meat Stew."
+        ]
+    },
+    {
+        id: 39,
+        name: "Fisherman Soup",
+        category: "Soup",
+        time: "35 min",
+        difficulty: "Easy",
+        region: "Niger Delta",
+        image: "assets/data-images/Seafood Okro _ Okra ￼.jpeg",
+        ingredients: [
+            "500g Fresh Catfish / Sea bass fillets",
+            "200g Fresh Prawns or Shrimps",
+            "200g Crab claws or Periwinkle in shell",
+            "1/3 cup Palm oil",
+            "2 tablespoons ground Crayfish",
+            "3 Scotch bonnet peppers, blended",
+            "1 small Cocoyam or Ngolo for slight thickening",
+            "Uziza leaves (chopped)",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "In a wide pot, bring 3 cups of water to a boil with palm oil, blended pepper, crayfish, and seasoning.",
+            "Add crab claws, periwinkle, and prawns first. Cook for 7 minutes.",
+            "Gently place fresh catfish fillets on top. Add slight cocoyam thickener if desired.",
+            "Do not stir vigorously with a spoon; gently sway the pot to keep fish fillets intact.",
+            "Simmer for 10 minutes, sprinkle chopped Uziza leaves on top, and serve with Starch or Eba."
+        ]
+    },
+    {
+        id: 40,
+        name: "Ukodo (Yam & Plantain Pepper Soup)",
+        category: "Swallow",
+        time: "45 min",
+        difficulty: "Easy",
+        region: "Niger Delta",
+        image: "assets/data-images/ji-mmiri-owu.jpeg",
+        ingredients: [
+            "500g Goat meat or Fresh Fish",
+            "1 medium Yam tuber, peeled and cut into chunks",
+            "2 Unripe Plantains, peeled and sliced",
+            "2 tablespoons Pepper soup spice mix (Ehuru, Uda, Uziza seeds)",
+            "3 Scotch bonnet peppers",
+            "2 tablespoons Crayfish",
+            "Fresh Scent leaves (Efirin/Nchanwu), chopped",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Boil goat meat with pepper soup spices, onions, and seasoning until half done.",
+            "Add yam chunks and unripe plantain slices directly into the spicy meat broth.",
+            "Add extra water if needed, stir in crayfish and extra pepper.",
+            "Cook until yam and plantain are soft and have absorbed the spicy herb stock.",
+            "Stir in chopped scent leaves, cook for 2 minutes, and serve hot in a bowl."
+        ]
+    },
+    {
+        id: 41,
+        name: "Ofada Rice & Ayamase Stew",
+        category: "Rice",
+        time: "55 min",
+        difficulty: "Hard",
+        region: "Yoruba",
+        image: "assets/data-images/ofada.jpeg",
+        videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
+        ingredients: [
+            "3 cups Local Ofada Rice",
+            "10 Green Bell Peppers & 4 Green Scotch Bonnets, coarsely blended",
+            "1 cup Palm oil (bleached until clear)",
+            "500g Diced Ponmo, Shaki, Beef, Boiled Eggs",
+            "2 tablespoons Locust beans (Iru)",
+            "2 large Onions, diced",
+            "Ground Crayfish, Seasoning cubes, Salt"
+        ],
+        steps: [
+            "Wash and boil local Ofada rice in water until tender, then drain and set aside wrapped in Uma leaves.",
+            "Bleach palm oil in a covered pot over medium heat for 10-12 minutes until clear (let cool before opening).",
+            "Fry chopped onions and iru in the bleached oil until aromatic.",
+            "Add coarsely blended green pepper mix and fry for 20 minutes until oil separates.",
+            "Add cooked meats, ponmo, crayfish, seasoning cubes, and boiled eggs.",
+            "Simmer sauce for 10 minutes and serve over warm Ofada rice."
+        ]
+    },
+    {
+        id: 42,
+        name: "Native Jollof Rice (Palm Oil Rice)",
+        category: "Rice",
+        time: "40 min",
+        difficulty: "Easy",
+        region: "National",
+        image: "assets/data-images/jollof-rice.jpeg",
+        ingredients: [
+            "3 cups Parboiled Rice",
+            "1/2 cup Palm oil",
+            "2 tablespoons Iru (Locust beans)",
+            "3 tablespoons Ground Crayfish",
+            "1 cup Smoked Fish & Dry Fish, shredded",
+            "2 Scotch bonnet peppers & 1 onion, blended",
+            "1 cup Scent leaves or Ugu, chopped",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Heat palm oil in a pot, fry onions and iru for 2 minutes.",
+            "Add blended pepper and fry for 5 minutes.",
+            "Pour in 3 cups of water/stock, add crayfish, smoked fish, dry fish, and seasoning cubes.",
+            "Bring to a boil, then add washed parboiled rice. Stir well.",
+            "Cover tightly and cook on low heat for 25 minutes until liquid is absorbed.",
+            "Stir in chopped scent leaves 2 minutes before removing from heat. Serve warm."
+        ]
+    },
+    {
+        id: 43,
+        name: "Tuwo Shinkafa",
+        category: "Swallow",
+        time: "35 min",
+        difficulty: "Easy",
+        region: "Hausa",
+        image: "assets/data-images/tuwon skinkafa.jpeg",
+        ingredients: [
+            "3 cups Short Grain Rice (Local Tuwo Rice)",
+            "4-5 cups Water"
+        ],
+        steps: [
+            "Wash local short-grain rice thoroughly.",
+            "Boil rice in plenty of water on medium heat until soft and mashable.",
+            "Use a wooden spatula (tuki) to mash soft rice against pot sides into a smooth paste.",
+            "Cover and steam on low heat for 5 minutes.",
+            "Shape into soft round balls and serve with Miyan Kuka, Miyan Taushe, or Egusi."
+        ]
+    },
+    {
+        id: 44,
+        name: "Masa (Waina)",
+        category: "Snacks",
+        time: "45 min",
+        difficulty: "Medium",
+        region: "Hausa",
+        image: "assets/data-images/tuwo masara.jpeg",
+        ingredients: [
+            "3 cups Raw Tuwo Rice (soaked overnight)",
+            "1 cup Cooked Rice",
+            "1 teaspoon Yeast",
+            "1 tablespoon Sugar",
+            "1/2 teaspoon Potash water (Kanwa)",
+            "Vegetable oil for frying"
+        ],
+        steps: [
+            "Blend soaked raw rice and cooked rice with little water into a smooth batter.",
+            "Add yeast, sugar, and potash water. Cover and let ferment in a warm spot for 2 hours.",
+            "Grease a traditional Masa pan or muffin pan with oil over medium heat.",
+            "Pour batter into pan compartments, cook until bottom turns golden brown.",
+            "Flip over and cook the second side until fluffy and light. Serve with Yaji suya spice or Miyan Taushe."
+        ]
+    },
+    {
+        id: 45,
+        name: "Abacha & Ugba (African Salad)",
+        category: "Street Food",
+        time: "30 min",
+        difficulty: "Medium",
+        region: "Igbo",
+        image: "assets/data-images/ugba-na-okporoko.jpeg",
+        ingredients: [
+            "3 cups Dried Abacha cassava shreds (soaked in warm water & drained)",
+            "1 cup Ugba (shredded oil bean)",
+            "1/2 cup Palm oil",
+            "1 teaspoon Akanwu (edible potash solution)",
+            "2 tablespoons ground Crayfish",
+            "1 teaspoon ground Ogiri Igbo",
+            "Fried Garden Egg leaves, Utazi leaves, Fried Fish, Kpomo"
+        ],
+        steps: [
+            "Mix palm oil and edible potash solution in a bowl until it emulsifies into a thick yellow paste (Ncha).",
+            "Stir in ground crayfish, Ogiri, pepper, and ugba into the Ncha mixture.",
+            "Add soaked and drained Abacha shreds. Mix thoroughly until coated.",
+            "Garnish with sliced garden egg leaves, utazi, sliced onions, fried fish, and kpomo. Serve at room temperature."
+        ]
+    },
+    {
+        id: 46,
+        name: "Suya (Spiced Beef Skewers)",
+        category: "Street Food",
+        time: "30 min",
+        difficulty: "Easy",
+        region: "Hausa",
+        image: "assets/data-images/suya.jpeg",
+        videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
+        ingredients: [
+            "500g Boneless Beef sirloin (thinly sliced)",
+            "1/2 cup Yaji (Suya Spice Blend - peanut powder, ginger, chili, garlic)",
+            "2 tablespoons Vegetable oil",
+            "Wooden Skewers (soaked in water)",
+            "Sliced Onions, Tomatoes, and Cabbage for serving"
+        ],
+        steps: [
+            "Thread thinly sliced beef tightly onto wooden skewers.",
+            "Brush beef skewers generously with vegetable oil.",
+            "Coat beef thoroughly in Yaji suya spice powder, pressing spice into meat.",
+            "Grill on an open charcoal grill or oven broiler at high heat for 12-15 minutes, turning occasionally.",
+            "Serve piping hot wrapped in old newspaper or foil with fresh sliced onions, tomatoes, and extra Yaji."
+        ]
+    },
+    {
+        id: 47,
+        name: "Asun (Spiced Smoked Goat)",
+        category: "Street Food",
+        time: "40 min",
+        difficulty: "Medium",
+        region: "Yoruba",
+        image: "assets/images-copy/931837b68ca2789e5195fb52cdd181e6.jpg",
+        ingredients: [
+            "1 kg Goat Meat with skin (roasted/smoked)",
+            "5 Scotch Bonnet peppers (Attarugu), coarsely crushed",
+            "2 Bell peppers & 1 large Onion, diced",
+            "3 tablespoons Vegetable oil",
+            "1 teaspoon Thyme & Curry",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Boil smoked goat meat with seasoning cubes, salt, and onions until tender. Cut into bite-sized chunks.",
+            "Grill or oven-roast goat meat chunks for 10 minutes until slightly charred.",
+            "Heat oil in a pan, sauté diced onions and coarsely crushed scotch bonnet peppers for 3 minutes.",
+            "Toss in grilled goat meat chunks and stir fry over high heat for 5 minutes until meat absorbs spicy pepper mix.",
+            "Serve scorching hot as party small chops."
+        ]
+    },
+    {
+        id: 48,
+        name: "Bole & Fish (PH Style)",
+        category: "Street Food",
+        time: "40 min",
+        difficulty: "Medium",
+        region: "Niger Delta",
+        image: "assets/data-images/fried plantain.jpeg",
+        ingredients: [
+            "4 Ripe or Unripe Plantains",
+            "2 Whole Mackerel Fish, cleaned and scored",
+            "1/2 cup Palm oil",
+            "4 Scotch bonnet peppers & 1 onion, coarsely ground",
+            "1 tablespoon Crayfish",
+            "Utazi leaves, shredded",
+            "Seasoning cubes and Salt"
+        ],
+        steps: [
+            "Season mackerel fish with pepper, seasoning, salt, and palm oil marinade.",
+            "Roast plantains and fish slowly over a charcoal wire grill until plantains are golden-brown and fish is tender.",
+            "Prepare Bole sauce: Heat palm oil in a pot, fry ground pepper, onions, crayfish, and seasoning for 10 minutes.",
+            "Serve hot roasted plantain and fish drenched in fiery palm oil pepper sauce with fresh Utazi leaves."
+        ]
+    },
+    {
+        id: 49,
+        name: "Nkwobi (Spicy Cow Foot)",
+        category: "Street Food",
+        time: "50 min",
+        difficulty: "Medium",
+        region: "Igbo",
+        image: "assets/data-images/nkwobi.jpeg",
+        ingredients: [
+            "1 kg Cow foot (cooked till soft)",
+            "1/2 cup Palm oil",
+            "1 teaspoon Potash solution (Akanwu)",
+            "1 tablespoon ground Ehuru (Calabash nutmeg)",
+            "2 tablespoons ground Crayfish",
+            "1 piece Ogiri Igbo",
+            "Sliced Utazi leaves & Sliced Onions for garnish"
+        ],
+        steps: [
+            "Boil cow foot with seasoning, salt, and onions until soft and gelatinous.",
+            "In a wooden mortar or pot, mix palm oil and potash solution until it forms a yellow emulsified cream.",
+            "Stir ground Ehuru, crayfish, Ogiri, and pepper into the yellow cream.",
+            "Add warm cooked cow foot chunks and mix thoroughly until every piece is coated.",
+            "Serve in traditional wooden mortar bowls (Nkpawu) garnished with raw onion rings and Utazi leaves."
+        ]
+    },
+    {
+        id: 50,
+        name: "Zobo Drink (Hibiscus Tea)",
+        category: "Drinks",
+        time: "30 min",
+        difficulty: "Easy",
+        region: "National",
+        image: "assets/images/download (4).jpeg",
+        videoUrl: "https://www.youtube.com/embed/zCeh1TswwZk",
+        ingredients: [
+            "3 cups Dried Zobo leaves (Hibiscus flowers)",
+            "1 Pineapple peel and core",
+            "2 inches Fresh Ginger, grated",
+            "1 tablespoon Cloves (Kanafuru), crushed",
+            "1 Orange (sliced)",
+            "Pineapple or Cucumber syrup/sweetener to taste"
+        ],
+        steps: [
+            "Rinse Zobo leaves quickly in cold water to remove dust.",
+            "In a large pot, combine rinsed Zobo leaves, pineapple peels, grated ginger, and crushed cloves with 8 cups of water.",
+            "Boil for 25-30 minutes until liquid is deep ruby red and aromatic.",
+            "Remove from heat and allow to cool completely.",
+            "Strain liquid through a fine cloth filter, stir in sweetener/fruit juice, and serve ice cold with citrus slices."
+        ]
     }
 ];
+

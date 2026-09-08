@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chop Admin - Nigerian Recipe Importer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/recipes.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <section class="Nav-bar">
+        <div class="header">
+            <h1>Chop<span class="color">.</span> <span class="admin-badge">Admin Workspace</span></h1>
+        </div>
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <nav><a href="../index.html">Home</a></nav>
+            <nav><a href="recipes.html">Recipes Catalog</a></nav>
+            <nav><a href="admin.html" class="active">Recipe Importer</a></nav>
+        </div>
+    </section>
+
+    <main class="admin-container">
+        <div class="admin-header">
+            <h1>Nigerian Recipe <span class="color">Auto-Importer.</span></h1>
+            <p>Paste recipe text or video links to instantly generate and publish new Nigerian dishes without writing code!</p>
+        </div>
+
+        <div class="admin-grid">
+            <!-- INPUT FORM PANEL -->
+            <div class="form-card">
+                <div class="form-tabs">
+                    <button class="tab-btn active" id="tabSmart">✨ Smart Paste & Parse</button>
+                    <button class="tab-btn" id="tabManual">📝 Manual Fields</button>
+                </div>
+
+                <!-- SMART PASTE TAB -->
+                <div class="tab-content" id="smartTabContent">
+                    <div class="form-group">
+                        <label for="pasteBox">Paste Recipe Text or YouTube Link:</label>
+                        <textarea id="pasteBox" rows="8" placeholder="Paste recipe details or YouTube link here...&#10;&#10;Example:&#10;Dish: Ofe Nsala (White Soup)&#10;Region: Igbo&#10;Category: Soup&#10;Time: 40 min&#10;Ingredients:&#10;- Catfish&#10;- Yam paste&#10;- Utazi leaves&#10;- Ehuru nutmeg&#10;Steps:&#10;1. Boil yam paste...&#10;2. Add catfish..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="smartRegion">Region / Origin:</label>
+                            <select id="smartRegion">
+                                <option value="National">National / General</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Igbo">Igbo</option>
+                                <option value="Hausa">Hausa / Northern</option>
+                                <option value="Efik/Ibibio">Efik / Ibibio</option>
+                                <option value="Niger Delta">Niger Delta</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="smartCategory">Category:</label>
+                            <select id="smartCategory">
+                                <option value="Soup">Soup</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Swallow">Swallow</option>
+                                <option value="Street Food">Street Food</option>
+                                <option value="Snacks">Snacks</option>
+                                <option value="Drinks">Drinks</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="action-btn" id="btnParse">⚡ Auto-Parse Recipe</button>
+                </div>
+
+                <!-- MANUAL FORM TAB -->
+                <div class="tab-content hidden" id="manualTabContent">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Dish Name:</label>
+                            <input type="text" id="manualName" placeholder="e.g. Banga Soup">
+                        </div>
+                        <div class="form-group">
+                            <label>Category:</label>
+                            <select id="manualCategory">
+                                <option value="Soup">Soup</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Swallow">Swallow</option>
+                                <option value="Street Food">Street Food</option>
+                                <option value="Snacks">Snacks</option>
+                                <option value="Drinks">Drinks</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Region / Origin:</label>
+                            <select id="manualRegion">
+                                <option value="National">National</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Igbo">Igbo</option>
+                                <option value="Hausa">Hausa</option>
+                                <option value="Efik/Ibibio">Efik/Ibibio</option>
+                                <option value="Niger Delta">Niger Delta</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Cook Time:</label>
+                            <input type="text" id="manualTime" placeholder="e.g. 45 min">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Image File Path / URL:</label>
+                            <input type="text" id="manualImage" placeholder="assets/data-images/banga-soup.jpeg">
+                        </div>
+                        <div class="form-group">
+                            <label>YouTube Embed Link (Optional):</label>
+                            <input type="text" id="manualVideo" placeholder="https://www.youtube.com/embed/...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ingredients (One per line):</label>
+                        <textarea id="manualIngredients" rows="4" placeholder="3 cups palm fruit extract&#10;500g fresh catfish&#10;2 tbsp crayfish..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cooking Steps (One per line):</label>
+                        <textarea id="manualSteps" rows="4" placeholder="1. Extract palm fruit juice...&#10;2. Boil stockfish and meats..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE PREVIEW & SAVED RECIPES PANEL -->
+            <div class="preview-card">
+                <h3>Live Preview</h3>
+                <div class="preview-box" id="previewContainer">
+                    <p class="placeholder-text">Parsed recipe card preview will appear here...</p>
+                </div>
+
+                <div class="preview-actions">
+                    <button class="save-btn" id="btnSaveLive">💾 Publish Recipe Live</button>
+                    <button class="export-btn" id="btnExportData">📥 Download data.js File</button>
+                </div>
+
+                <div class="custom-list-section">
+                    <h4>Custom Imported Recipes (<span id="customCount">0</span>)</h4>
+                    <div id="customRecipesList" class="custom-list">
+                        <!-- Custom saved recipes will populate here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('toggle');
+            });
+        }
+    </script>
+</body>
+
+</html>

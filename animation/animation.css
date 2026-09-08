@@ -1,0 +1,31 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%) translateX(50%);
+        letter-spacing: 15px;
+    }
+
+    to {
+        opacity: 2;
+        transform: translateY(0px) translateX(0);
+        letter-spacing: 0;
+    }
+}
+
+.box {
+    animation: fadeIn 10s ease 0.5s forwards;
+    position: fixed;
+    background: #04040a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #04040a;
+    color: #ffffff
+}
